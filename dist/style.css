@@ -77,8 +77,8 @@ header .navbarcontents .logo {
 .brands {
   display: flex;
   justify-content: center;
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   margin-top: 2rem;
   width: 100%;
 }
@@ -98,14 +98,30 @@ header .navbarcontents .logo {
 .brands .collunm img {
   width: 8rem;
 }
+.brands .input-container {
+  display: flex;
+  gap: 2rem;
+}
+.brands .input-container .filter-container {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 100%;
+}
+.brands .input-container .filter-container input {
+  width: 100%;
+  padding-left: 10px;
+  height: 40px;
+  border: 1px solid rgb(196, 196, 196);
+}
 
 .container nav {
   position: absolute;
   left: 50%;
-  bottom: -5px;
+  bottom: -2rem;
   transform: translateX(-50%);
 }
 
 footer {
-  background-color: rgb(197, 197, 197);
+  background-color: grey;
+  padding: 2rem;
 }

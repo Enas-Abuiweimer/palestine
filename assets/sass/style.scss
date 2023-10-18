@@ -51,7 +51,7 @@ body{
 
   .search-container {
     margin-top: 1rem;
-    width: -webkit-fill-available;
+   width: -webkit-fill-available;
     position: relative;
     display: inline-block;
   } 
@@ -72,12 +72,12 @@ body{
   .brands{
     display: flex;
     justify-content: center;
-    column-gap: 5rem;
+    column-gap: 2rem;
     margin-top: 2rem;
     width: 100% ;
     .collunm{
         display: grid; 
-        row-gap: 1rem;
+        row-gap: 1rem; 
         width: 100%;
         .card-content{
             display: flex;
@@ -91,15 +91,34 @@ body{
             width: 8rem;
         }
     }
+    .input-container{
+        display: flex;
+        gap: 2rem;
+        
+        .filter-container{
+            margin-top: 1rem; 
+            display: inline-block;
+            width: 100%;
+            input{
+                width: 100%;
+                padding-left: 10px;
+                height: 40px; 
+                border: 1px solid rgb(196, 196, 196);
+            }
+
+        }
+    }
   }
-  .container{
+  .container{ 
     nav{
         position: absolute;
         left: 50%;
-        bottom: -5px;
+        bottom: -2rem;
         transform: translateX(-50%);
     }
   }
-  footer{
-    background-color: rgb(197, 197, 197);
-  }
+ 
+ footer{
+    background-color: grey;
+    padding: 2rem;
+ }
