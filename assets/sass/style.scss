@@ -38,19 +38,16 @@ body{
   }
   header {
     background-color: rgb(197, 197, 197);
-    width: -webkit-fill-available;
-    
+    width: 100%;
     .navbar-contents{
         .logo{
             font-size: 50px;
             padding:1rem;
            }
-    }
-       
+    }      
   }
 .input-container{
     display: flex;
-    width: 100%;
     gap: 1rem;
     margin-top: 1rem;
     .search-container {
@@ -73,15 +70,14 @@ body{
          border-radius: 10px;
        }
        .filter-inputs{
-        display: flex;
         width: 100%;
         gap: 0.2rem;
         flex: 1;
        
         .filter-container{
-            input{
-                width: 20rem;
-                padding-left: 30px;
+            select{
+                width: 100%;
+                padding-left: 10px;
                 height: 40px; 
                 border: 1px solid rgb(196, 196, 196);
                 border-radius: 10px;
@@ -99,6 +95,7 @@ body{
     gap: 10px; 
     width: 100%; 
    margin-top: 1rem; 
+   
     .card-content {
         border: 1px solid #e9e6e6;
         padding: 10px;
@@ -106,6 +103,7 @@ body{
         align-items: center;
         position: relative;
         border-radius: 10px;
+        box-shadow: 5px 5px 10px rgb(232, 232, 232);
         #icon{
             img{
                 width: 10rem;
@@ -118,26 +116,40 @@ body{
         }
     }
 
-.showlinks{
-   display: flex;
-   border: 1px solid;
-   border-radius: 10px;
-   a{
-    text-decoration: none;
-    padding: 2rem;
-    text-align: center;
-   }
-   #go-to-link{
-    background-color: red;
-   }
-   #share{
-    background-color: green;
-   }
-  b{
-   color: rgb(255, 255, 255);
-   font-size: 24px;
-   }
-   }
+    .links{
+        display: flex;
+        z-index: 999;
+        position: absolute;
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        border: 1 solid gainsboro;
+        border-radius: 10px;
+        margin-left: -11px;
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+        
+        a{
+            background-color: red;
+            width: 100%;
+            border-radius: 10px 0px 0px 10px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            padding-top: 2.5rem;
+            
+        }
+        button{
+            background-color: green;
+            width: 100%;
+            border-radius: 0 10px 10px 0;
+            color: white;
+            border: none;
+            
+        }
+    }
+    .card-content:hover .links{
+        opacity: 0.9;
+    }
 }
   .container{ 
     nav{

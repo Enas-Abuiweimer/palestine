@@ -45,7 +45,7 @@ body {
 
 header {
   background-color: rgb(197, 197, 197);
-  width: -webkit-fill-available;
+  width: 100%;
 }
 header .navbar-contents .logo {
   font-size: 50px;
@@ -54,7 +54,6 @@ header .navbar-contents .logo {
 
 .input-container {
   display: flex;
-  width: 100%;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -77,14 +76,13 @@ header .navbar-contents .logo {
   border-radius: 10px;
 }
 .input-container .filter-inputs {
-  display: flex;
   width: 100%;
   gap: 0.2rem;
   flex: 1;
 }
-.input-container .filter-inputs .filter-container input {
-  width: 20rem;
-  padding-left: 30px;
+.input-container .filter-inputs .filter-container select {
+  width: 100%;
+  padding-left: 10px;
   height: 40px;
   border: 1px solid rgb(196, 196, 196);
   border-radius: 10px;
@@ -105,6 +103,7 @@ header .navbar-contents .logo {
   align-items: center;
   position: relative;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(232, 232, 232);
 }
 .cards-container .card-content #icon img {
   width: 10rem;
@@ -114,25 +113,36 @@ header .navbar-contents .logo {
   top: 1rem;
   right: 1rem;
 }
-.cards-container .showlinks {
+.cards-container .links {
   display: flex;
-  border: 1px solid;
+  z-index: 999;
+  position: absolute;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border: 1 solid gainsboro;
   border-radius: 10px;
+  margin-left: -11px;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
 }
-.cards-container .showlinks a {
-  text-decoration: none;
-  padding: 2rem;
-  text-align: center;
-}
-.cards-container .showlinks #go-to-link {
+.cards-container .links a {
   background-color: red;
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding-top: 2.5rem;
 }
-.cards-container .showlinks #share {
+.cards-container .links button {
   background-color: green;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  border: none;
 }
-.cards-container .showlinks b {
-  color: rgb(255, 255, 255);
-  font-size: 24px;
+.cards-container .card-content:hover .links {
+  opacity: 0.9;
 }
 
 .container nav {
