@@ -12,7 +12,7 @@ body{
         max-width: 540px;
     } 
 
-    @media (max-width: 576px) {
+    @media (max-width: 576px) { 
         max-width: 100%;
     }
 
@@ -40,85 +40,115 @@ body{
     background-color: rgb(197, 197, 197);
     width: -webkit-fill-available;
     
-    .navbarcontents{
+    .navbar-contents{
         .logo{
             font-size: 50px;
-            padding:1rem 1rem;
+            padding:1rem;
            }
     }
        
   }
-
-  .search-container {
-    margin-top: 1rem;
-   width: -webkit-fill-available;
-    position: relative;
-    display: inline-block;
-  } 
-  .search-container i {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  
-  .search-container input {
-    width: -webkit-fill-available;
-    padding-left: 30px;
-    height: 40px; 
-    border: 1px solid rgb(196, 196, 196);
-  }
-  .brands{
+.input-container{
     display: flex;
-    justify-content: center;
-    column-gap: 2rem;
-    margin-top: 2rem;
-    width: 100% ;
-    .collunm{
-        display: grid; 
-        row-gap: 1rem; 
-        width: 100%;
-        .card-content{
-            display: flex;
-            align-items: center;
-            background-color: white;
-            padding: 1rem 0.5rem;
-            border: 1px solid rgb(190, 190, 190);
-            border-radius: 10px;
-        }
-        img{
-            width: 8rem;
-        }
-    }
-    .input-container{
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+    .search-container {
+         flex: 1;
+         position: relative;
+         
+       } 
+       .search-container i {
+         position: absolute;
+         top: 50%;
+         left: 10px;
+         transform: translateY(-50%);
+         cursor: pointer;
+       }
+       .search-container input {
+         width: -webkit-fill-available;
+         padding-left: 30px;
+         height: 40px; 
+         border: 1px solid rgb(196, 196, 196);
+         border-radius: 10px;
+       }
+       .filter-inputs{
         display: flex;
-        gap: 2rem;
-        
+        width: 100%;
+        gap: 0.2rem;
+        flex: 1;
+       
         .filter-container{
-            margin-top: 1rem; 
-            display: inline-block;
-            width: 100%;
             input{
-                width: 100%;
-                padding-left: 10px;
+                width: 20rem;
+                padding-left: 30px;
                 height: 40px; 
                 border: 1px solid rgb(196, 196, 196);
+                border-radius: 10px;
             }
+          
+        }
+       }
+}
+  
 
+  .cards-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: repeat(7, 1fr); 
+    gap: 10px; 
+    width: 100%; 
+   margin-top: 1rem; 
+    .card-content {
+        border: 1px solid #e9e6e6;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 10px;
+        #icon{
+            img{
+                width: 10rem;
+            }
+        }
+        .brand-logo{
+           position: absolute; 
+           top: 1rem;
+           right: 1rem;
         }
     }
-  }
+
+.showlinks{
+   display: flex;
+   border: 1px solid;
+   border-radius: 10px;
+   a{
+    text-decoration: none;
+    padding: 2rem;
+    text-align: center;
+   }
+   #go-to-link{
+    background-color: red;
+   }
+   #share{
+    background-color: green;
+   }
+  b{
+   color: rgb(255, 255, 255);
+   font-size: 24px;
+   }
+   }
+}
   .container{ 
     nav{
         position: absolute;
         left: 50%;
-        bottom: -2rem;
         transform: translateX(-50%);
     }
   }
  
  footer{
-    background-color: grey;
+    background-color: rgb(197, 197, 197);
     padding: 2rem;
- }
+    text-align: center;  
+ } 

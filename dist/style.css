@@ -47,81 +47,102 @@ header {
   background-color: rgb(197, 197, 197);
   width: -webkit-fill-available;
 }
-header .navbarcontents .logo {
+header .navbar-contents .logo {
   font-size: 50px;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
-.search-container {
+.input-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
   margin-top: 1rem;
-  width: -webkit-fill-available;
-  position: relative;
-  display: inline-block;
 }
-
-.search-container i {
+.input-container .search-container {
+  flex: 1;
+  position: relative;
+}
+.input-container .search-container i {
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
   cursor: pointer;
 }
-
-.search-container input {
+.input-container .search-container input {
   width: -webkit-fill-available;
   padding-left: 30px;
   height: 40px;
   border: 1px solid rgb(196, 196, 196);
-}
-
-.brands {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  margin-top: 2rem;
-  width: 100%;
-}
-.brands .collunm {
-  display: grid;
-  row-gap: 1rem;
-  width: 100%;
-}
-.brands .collunm .card-content {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  padding: 1rem 0.5rem;
-  border: 1px solid rgb(190, 190, 190);
   border-radius: 10px;
 }
-.brands .collunm img {
-  width: 8rem;
-}
-.brands .input-container {
+.input-container .filter-inputs {
   display: flex;
-  gap: 2rem;
-}
-.brands .input-container .filter-container {
-  margin-top: 1rem;
-  display: inline-block;
   width: 100%;
+  gap: 0.2rem;
+  flex: 1;
 }
-.brands .input-container .filter-container input {
-  width: 100%;
-  padding-left: 10px;
+.input-container .filter-inputs .filter-container input {
+  width: 20rem;
+  padding-left: 30px;
   height: 40px;
   border: 1px solid rgb(196, 196, 196);
+  border-radius: 10px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-top: 1rem;
+}
+.cards-container .card-content {
+  border: 1px solid #e9e6e6;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+}
+.cards-container .card-content #icon img {
+  width: 10rem;
+}
+.cards-container .card-content .brand-logo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.cards-container .showlinks {
+  display: flex;
+  border: 1px solid;
+  border-radius: 10px;
+}
+.cards-container .showlinks a {
+  text-decoration: none;
+  padding: 2rem;
+  text-align: center;
+}
+.cards-container .showlinks #go-to-link {
+  background-color: red;
+}
+.cards-container .showlinks #share {
+  background-color: green;
+}
+.cards-container .showlinks b {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
 }
 
 .container nav {
   position: absolute;
   left: 50%;
-  bottom: -2rem;
   transform: translateX(-50%);
 }
 
 footer {
-  background-color: grey;
+  background-color: rgb(197, 197, 197);
   padding: 2rem;
+  text-align: center;
 }
